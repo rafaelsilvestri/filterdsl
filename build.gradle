@@ -1,0 +1,34 @@
+plugins {
+    id 'java-library'
+    id 'idea'
+    id 'antlr'
+}
+
+repositories {
+    jcenter()
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+group = 'com.github.rafaelsilvestri.filterdsl'
+version = '1.0.0'
+
+dependencies {
+    antlr "org.antlr:antlr4:4.7"
+    implementation 'javax.annotation:javax.annotation-api:1.2'
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.6.2'
+}
+
+generateGrammarSource {
+    arguments += ["-visitor"]
+}
+
+test {
+    // Use junit platform for unit tests
+    useJUnitPlatform()
+}
