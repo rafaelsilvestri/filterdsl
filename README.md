@@ -56,6 +56,7 @@ Take a look at [SqlBuilderTest](src/test/java/com/github/rafaelsilvestri/filterd
 * [ ] Improve String concatenation on the builders
 * [ ] Support ElasticSearch syntax
 * [ ] Improve the treatment for specific values like numbers 
+* [ ] Add Querydsl support
 
 ## References
 * https://www.antlr.org/
